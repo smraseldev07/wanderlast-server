@@ -23,7 +23,15 @@ const bookingcollection = db.collection('bookings')
 
 const app = express();
 const port = 5000;
-app.use(cors())
+app.use(cors({
+origin: [
+'http://localhost:3000',
+    'https://wanderlast-client-nine.vercel.app',
+  ],
+  methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true,
+}))
 app.use(express.json())
 
 const verifyapi = async(req , res , next)=>{
