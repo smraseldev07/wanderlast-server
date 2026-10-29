@@ -29,7 +29,7 @@ app.use(
   cors({
     origin: [
       'http://localhost:3000',
-      'https://wanderlast-client-nine.vercel.app',
+      'https://wanderlast-client-lyart.vercel.app',
     ],
     methods: ['GET', 'POST', 'PATCH', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
